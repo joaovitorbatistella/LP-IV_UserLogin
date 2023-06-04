@@ -4,7 +4,7 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Edit Profile</h4>
+                  <h4 class="card-title"><?= $isUpdate ? 'Edit Profile' : 'Create Profile' ?></h4>
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body">
@@ -13,19 +13,19 @@
                       <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Company (disabled)</label>
-                          <input type="text" class="form-control" disabled>
+                          <input type="text" name="company" value="<?=$objUser->company?>" class="form-control" disabled>
                         </div>
                       </div>
                       <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control">
+                          <input type="text" name="username" value="<?=$objUser->username?>" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control">
+                          <input type="email" name="email" value="<?=$objUser->email?>" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -33,13 +33,13 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Fist Name</label>
-                          <input type="text" class="form-control">
+                          <input type="text" name="first_name" value="<?=$objUser->first_name?>" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Last Name</label>
-                          <input type="text" class="form-control">
+                          <input type="text" name="last_name" value="<?=$objUser->last_name?>" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -47,7 +47,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Adress</label>
-                          <input type="text" class="form-control">
+                          <input type="text" name="address" value="<?=$objUser->address?>" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -55,19 +55,19 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">City</label>
-                          <input type="text" class="form-control">
+                          <input type="text" name="city" value="<?=$objUser->city?>" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Country</label>
-                          <input type="text" class="form-control">
+                          <input type="text" name="country" value="<?=$objUser->country?>" class="form-control">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Postal Code</label>
-                          <input type="text" class="form-control">
+                          <input type="text" name="postal_code" value="<?=$objUser->postal_code?>" class="form-control">
                         </div>
                       </div>
                     </div>
@@ -77,12 +77,12 @@
                           <label>About Me</label>
                           <div class="form-group">
                             <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                            <textarea class="form-control" rows="5"></textarea>
+                            <textarea class="form-control" name="about_me" rows="5"><?=$objUser->about_me?></textarea>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                    <button type="submit" class="btn btn-primary pull-right"><?= $isUpdate ? 'Update Profile' : 'Create Profile' ?></button>
                     <div class="clearfix"></div>
                   </form>
                 </div>

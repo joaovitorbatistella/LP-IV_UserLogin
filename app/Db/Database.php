@@ -4,10 +4,10 @@
 	use PDO;
 
 	class Database{
-		const HOST = 'localhost';
-		const NAME = 'crud';
+		const HOST = '127.0.0.1';
+		const NAME = 'lpiv_crud';
 		const USER = 'admin';
-		const PASS = '';
+		const PASS = 'Admin@1234';
 
 		private $table;
 		private $connection;

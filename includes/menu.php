@@ -9,16 +9,16 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item <?=NAV == 'usuarios' ? 'active' : ''?>">
-            <a class="nav-link" href="usuarios.php">
+          <li class="nav-item <?=NAV == 'users' ? 'active' : ''?>">
+            <a class="nav-link" href="users.php">
               <i class="material-icons">content_paste</i>
               <p>Usuários Cadastrados</p>
             </a>
           </li>
-          <li class="nav-item <?=NAV == 'cadastro' ? 'active' : ''?>">
-            <a class="nav-link" href="cadastro.php">
+          <li class="nav-item <?=NAV == 'register' ? 'active' : ''?>">
+            <a class="nav-link" href="register.php">
               <i class="material-icons">person</i>
-              <p>Cadastrar Usuário</p>
+              <p><?= $isUpdate ? 'Atualizar Usuário' : 'Cadastrar Usuário' ?></p>
             </a>
           </li>                  
         </ul>
